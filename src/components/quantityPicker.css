@@ -1,0 +1,15 @@
+.qt-picker {
+    padding: 10px;
+}
+
+.qt-picker button {
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.qt-picker label {
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(212, 86, 12);
+}
