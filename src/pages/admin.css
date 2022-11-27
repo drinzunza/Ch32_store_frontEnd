@@ -1,0 +1,61 @@
+.admin {
+    background-color: #ebebec;
+    min-height: calc(100vh - 120px);
+}
+
+.admin h3 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.admin .content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.admin .products-form  {
+    flex: 3;
+    max-width: 400px;
+    background: white;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.admin .coupons-form {
+    flex: 2;
+    max-width: 300px;
+    background: white;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.admin h5 {
+    text-align: center;
+    color: rgb(13, 47, 80);
+    margin-bottom: 10px;
+}
+
+.my-control {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.my-control label {    
+    width: 75px;
+    text-align: right;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin-right: 5px;
+}
+
+.my-control input {
+    flex: 1;
+}
+
+.center {
+    text-align: center;
+}
