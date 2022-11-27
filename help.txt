@@ -1,0 +1,19 @@
+
+# start a project
+git init
+
+# add a remote (github url)
+git remote add origin <github url>
+
+# add all files
+git add .
+
+# commit (local copy)
+git commit -m "ANY MESSAGE"
+
+# push to remote (github)
+# first time:
+git push -u origin master
+
+# after first time:
+git push
