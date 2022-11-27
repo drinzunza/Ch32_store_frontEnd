@@ -21,10 +21,3 @@ function Product(props) {
 }
 
 export default Product;
-
-/**
- * create a QuantityPicker component
- *  with button / label / button
- *
- * Render QuantityPicker on Product component
- */
