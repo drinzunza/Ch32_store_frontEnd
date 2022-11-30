@@ -1,8 +1,11 @@
 import './navBar.css';
-
-import {Link} from 'react-router-dom';
+import DataContext from '../state/dataContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const cart = useContext(DataContext).cart;
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
@@ -31,19 +34,19 @@ function NavBar() {
                 About me
               </Link>
             </li>
-            
+
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/admin">
                 Admin
               </Link>
             </li>
-
           </ul>
           <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <Link className="btn btn-outline-success" to="/cart">
+              <i class="bi bi-basket"></i>
+              <span className="badge text-bg-light">{cart.length}</span>
+              &nbsp;View Cart
+            </Link>
           </form>
         </div>
       </div>
@@ -51,3 +54,6 @@ function NavBar() {
   );
 }
 export default NavBar;
+
+
+// npm i -s bootstrap-icons
