@@ -6,6 +6,16 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   const cart = useContext(DataContext).cart;
 
+  const countProducts = () => {
+    let total = 0;
+    for(let i =0; i<cart.length; i++) {
+      const prod = cart[i];
+      total += prod.quantity;
+    }
+
+    return total;
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container-fluid">
@@ -43,8 +53,7 @@ function NavBar() {
           </ul>
           <form className="d-flex" role="search">
             <Link className="btn btn-outline-success" to="/cart">
-              <i class="bi bi-basket"></i>
-              <span className="badge text-bg-light">{cart.length}</span>
+              <span className="badge text-bg-light">{countProducts()}</span>
               &nbsp;View Cart
             </Link>
           </form>
@@ -56,4 +65,5 @@ function NavBar() {
 export default NavBar;
 
 
-// npm i -s bootstrap-icons
+// create a cart page
+// register the url on app.js to display the page on /cart path
