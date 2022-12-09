@@ -7,9 +7,9 @@ function Catalog() {
   let [products, setProducts] = useState([]);
 
   // arrow function
-  const loadCatalog = () => {
+  const loadCatalog = async () => {
     let service = new DataService();
-    let prods = service.getCatalog();
+    let prods = await service.getCatalog();
     setProducts(prods);
   };
 
